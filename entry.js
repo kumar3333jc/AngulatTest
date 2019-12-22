@@ -1,4 +1,5 @@
-const { app, BrowserWindow, ipcMain } = require('electron');
+const { app, BrowserWindow, ipcMain ,ipcRenderer } = require('electron');
+ 
 const path = require('path');
 const fs = require('fs');
 var sqlite3 = require('sqlite3').verbose();
@@ -29,9 +30,32 @@ db.serialize(function () {
 });
 //db.close();
 
+ipcRenderer.send('app_version');
+ipcRenderer.on('app_version', (event, arg) => {
+    console.log("app_version  >>>  "+ event+"  "+arg)
+  ipcRenderer.removeAllListeners('app_version');
+  version.innerText = 'Version ' + arg.version;
+});
+
+ipcRenderer.on('update_available', () => {
+    console.log("update_available  >>>  ")
+  ipcRenderer.removeAllListeners('update_available');
+  message.innerText = 'A new update is available. Downloading now...';
+  notification.classList.remove('hidden');
+});
+
+ipcRenderer.on('update_downloaded', () => {
+    console.log("update_downloaded  >>>  ")
+  ipcRenderer.removeAllListeners('update_downloaded');
+  message.innerText = 'Update Downloaded. It will be installed on restart. Restart now?';
+  restartButton.classList.remove('hidden');
+  notification.classList.remove('hidden');
+});
+
 app.on('ready', () => {
     createWindow();
     autoUpdater.checkForUpdatesAndNotify();
+    console.log("ready   "+autoUpdater.checkForUpdatesAndNotify())
 })
 
 function createWindow() {
