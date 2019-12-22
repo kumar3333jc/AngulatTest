@@ -4,7 +4,7 @@
   "main": "entry.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/kumar3333jc/angularElectron.git"
+    "url": "https://github.com/kumar3333jc/AngulatTest.git"
   },
   "build": {
     "appId": "FORM10FA",
@@ -22,7 +22,7 @@
       "publish": {
         "provider": "github",
         "owner": "kumar3333jc",
-        "repo": "angularElectron"
+        "repo": "AngulatTest"
       },
       "icon": "src/assets/images/Preview.jpg"
     },
@@ -36,7 +36,7 @@
   "publish": {
     "provider": "github",
     "owner": "kumar3333jc",
-    "repo": "angularElectron"
+    "repo": "AngulatTest"
   },
   "scripts": {
     "ng": "ng",
