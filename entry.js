@@ -114,6 +114,9 @@ ipcMain.on('get-items', async (event) => {
 
 
 ipcMain.on('app_version', (event) => {
+    console.log("version" )
+    console.log( event) 
+
     event.sender.send('app_version', { version: app.getVersion() });
   });
   
