@@ -1,6 +1,6 @@
 {
   "name": "angulartest2",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "main": "entry.js",
   "repository": {
     "type": "git",
@@ -22,7 +22,7 @@
       "publish": {
         "provider": "github",
         "owner": "kumar3333jc",
-        "repo": "AngulatTest" 
+        "repo": "AngulatTest"
       },
       "icon": "src/assets/images/Preview.jpg"
     },
