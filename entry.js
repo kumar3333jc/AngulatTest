@@ -49,7 +49,7 @@ function createWindow() {
     win.removeMenu();
 
     // and load the index.html of the app.
-    win.loadURL(`file://${__dirname}/dist/NXTAngularSample/index.html`);
+    win.loadURL(`file://${__dirname}/dist/angulartest2/index.html`);
 
 
     // Open the DevTools.

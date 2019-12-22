@@ -1,6 +1,6 @@
 {
   "name": "angulartest2",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "main": "entry.js",
   "repository": {
     "type": "git",
@@ -51,6 +51,7 @@
     "deploy": " electron-builder build   --win --publish always"
   },
   "dependencies": {
+    "3": "^2.1.0",
     "@angular/animations": "~8.2.11",
     "@angular/common": "~8.2.11",
     "@angular/compiler": "~8.2.11",
@@ -59,11 +60,10 @@
     "@angular/platform-browser": "~8.2.11",
     "@angular/platform-browser-dynamic": "~8.2.11",
     "@angular/router": "~8.2.11",
-    
     "electron-updater": "^4.0.6",
     "knex": "^0.20.4",
     "rxjs": "~6.4.0",
-    "sqlite3": "^4.1.1",
+    "sqlite": "^3.0.3",
     "tslib": "^1.10.0",
     "zone.js": "~0.9.1"
   },
